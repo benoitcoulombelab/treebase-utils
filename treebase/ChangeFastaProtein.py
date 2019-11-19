@@ -48,7 +48,7 @@ def changenames(input, newnames, output):
                 print (protein)
             newname = newnames.get(protein, protein)
             if newname:
-                outfile.write(name_pattern.sub(newname, line))
+                outfile.write(name_pattern.sub('>' + newname, line))
             else:
                 outfile.write(line)
 
